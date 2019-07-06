@@ -1,15 +1,22 @@
 .card-list {
   width: 85vw;
-  margin: 0 auto;
+  margin: 2rem auto;
+  margin-bottom: 10rem;
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .card-list {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+  }
 }
 
 @media (max-width: 980px) {
   .card-list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
   }
 }
 
